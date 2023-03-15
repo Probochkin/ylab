@@ -79,12 +79,13 @@ public class SequencesImpl implements SequenceGenerator {
     @Override
     public void i(int n) {
         for (int i = 1; i <= n; i++) {
-            if (i == 1) {
-                System.out.print(1 + " ");
-            } else {
-                System.out.print(IntStream.rangeClosed(2, i).reduce((x, y) -> x * y).getAsInt() + " ");
-            }
+            int fact = 1;
+            for (int j = 1; j <= i; j++) {
+                fact = fact * j;
         }
+            System.out.print(fact + " ");
+
+    }
     }
 
 

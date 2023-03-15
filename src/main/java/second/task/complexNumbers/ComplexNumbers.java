@@ -20,23 +20,20 @@ public class ComplexNumbers {
     }
 
     public  ComplexNumbers sum(ComplexNumbers n){
-        ComplexNumbers temp = new ComplexNumbers(0.0, 0.0);
-        temp.my_real = this.my_real + n.my_real;
-        temp.my_imag = this.my_imag + n.my_imag;
-        return(temp);
+        double real = this.my_real + n.my_real;
+        double imag = this.my_imag + n.my_imag;
+        return new ComplexNumbers(real, imag);
     }
 
     public  ComplexNumbers subtraction(ComplexNumbers n) {
-        ComplexNumbers temp = new ComplexNumbers(0.0, 0.0);
-        temp.my_real = this.my_real - n.my_real;
-        temp.my_imag = this.my_imag - n.my_imag;
-        return(temp);
+        double real = this.my_real - n.my_real;
+        double imag = this.my_imag - n.my_imag;
+        return new ComplexNumbers(real, imag);
     }
     public  ComplexNumbers multiplication(ComplexNumbers n) {
-        ComplexNumbers temp = new ComplexNumbers(0.0, 0.0);
-        temp.my_real = this.my_real * n.my_real - this.my_real * n.my_imag;
-        temp.my_imag = this.my_imag * n.my_imag + this.my_imag * n.my_real;
-        return(temp);
+        double real = this.my_real * n.my_real - this.my_real * n.my_imag;
+        double imag = this.my_imag * n.my_imag + this.my_imag * n.my_real;
+        return new ComplexNumbers(real, imag );
     }
     public double abs() {
         return Math.sqrt(this.my_real*this.my_real + this.my_imag*this.my_imag);
